@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Full Screen WebVR - IFRAME</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .fullscreenframe{
+        position:fixed; 
+        top:0px; 
+        left:0px; 
+        bottom:0px; 
+        right:0px; 
+        width:100%; 
+        height:100%; 
+        border:none; 
+        margin:0; 
+        padding:0; 
+        overflow:hidden;   
+        }    
+    </style>
+</head>
+<body>
+    <iframe src="https://googlevr.github.io/webvr-polyfill/examples/basic/" 
+    class="fullscreenframe"></iframe>    
+</body>
+</html>
