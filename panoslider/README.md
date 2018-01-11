@@ -7,8 +7,8 @@ An easy to use template for creating full width Streetview sliders that shuffles
 
 ## IFRAME Demo
 
-*[WalkInto Test Page](https://walkinto.in/iframetest)
-*[Pano Slider](https://devasur.githob.io/panoslider)
+* [WalkInto Test Page](https://walkinto.in/iframetest) Scroll Down
+* [Pano Slider](https://devasur.githob.io/panoslider)
 
 ## Documentation
 
@@ -61,12 +61,12 @@ Change the MapS API key used in this demo page to your key.  This is important. 
 * On your server make a folder accessible from WEB.  Name is 'walkintoslider'
 * Inside 'walkintoslider' folder create a new folder 'js'
 * place the modified index.html at /walkintoslider/index.html
-* place two JavaScript files from [panoslider https://github.com/devasur/devasur.github.io/tree/master/panoslider/js] in your /walkintoslider/js folder.
+* place two JavaScript files from [panoslider](https://github.com/devasur/devasur.github.io/tree/master/panoslider/js) in your /walkintoslider/js folder.
 * Now, test your sldier works by visiting yourdomain.com/walkintosldier/index.html
 
 ## Using it in an IFRAME
 
-You may use this slider on an IFRAME on your home page or any other page.  See an example [here https://walkinto.in/iframetest]
+You may use this slider on an IFRAME on your home page or any other page.  See an example [here]( https://walkinto.in/iframetest)
 
 ```html
 <iframe src="https://devasur.github.io/panoslider/" width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="shownice"></iframe>
