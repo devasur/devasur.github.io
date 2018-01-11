@@ -3,7 +3,6 @@ var panorama = null;
 var pov = {heading:0,pitch:0};
 var search = new AdvancedSearch();
 var panoIndex = 0;
-var panoSwitchInterval = 10; //Switch to next pano every 3 seconds.
 function autoRotate(){	
   if(panorama && !pauseAutoRotate){
       var pov = panorama.getPov();
