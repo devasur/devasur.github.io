@@ -35,7 +35,7 @@ function run(){
       motionTracking:false,
       motionTrackingControl:false,	
       panControl:false,
-      scrollwheel:true,
+      scrollwheel:false,
       showRoadLabels:false,
       zoomControl:false
   };  
