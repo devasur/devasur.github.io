@@ -15,7 +15,7 @@ An easy to use template for creating full width Streetview sliders that shuffles
 You need to host the HTML page and required javascript files in your server.  You may download these file [here https://github.com/devasur/devasur.github.io/tree/master/panoslider]
 
 You also will need a Maps API key.  You can create it free of charge at [Google Maps API console https://developers.google.com/maps/documentation/embed/get-api-key].
-
+If you already have a Maps API key that is valid for your domain you could use it too.
 
 ## Customization
 
