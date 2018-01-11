@@ -48,7 +48,9 @@ function run(){
       panorama.setOptions(panoramaOptions);
       autoRotate();
       setInterval(function(){
-          nextPano()
+          requestAnimationFrame(function(){
+            nextPano();
+          })          
       },panoSwitchInterval * 1000)
   })     
 }
