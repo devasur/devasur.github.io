@@ -1,0 +1,31 @@
+<head>
+    <script src="https://maps.google.com/maps/api/js?v=3.exp&sensor=false"/>
+    <script src="https://walkinto.in/js/controllers/streetview_url_search.js"/>
+    <script src="js/panoslider.js"/>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }        
+    </style>
+</head>>
+<body onmousedown="pauseAutoRotate=true;" onmouseup="pauseAutoRotate=false;" onload="run()">
+    <div id="map-canvas"></div>
+    <script>
+        var speed = -0.05;
+        var randomSvDb = [	    
+            "https://www.google.com/maps/place/45%C2%B041'54.1%22N+10%C2%B004'42.8%22E/@45.6958548,10.0722688,3a,103.9y,224.12h,109.29t/data=!3m4!1e1!3m2!1sU6_1WolkwDjBYG_GHOp7cw!2e0",
+            "https://www.google.com/maps/place//@45.4403244,12.3379607,3a,103.9y,260.33h,102.1t/data=!3m4!1e1!3m2!1sCbh0-gNHnhYPjnPY6t8zWA!2e0",
+            "https://www.google.com/maps/place/13%C2%B026'05.1%22N+103%C2%B053'20.4%22E/@13.4347567,103.8890316,3a,103.9y,219.16h,98.61t/data=!3m4!1e1!3m2!1syNucDXAxTuBc83FuLZlVAQ!2e0",
+            "https://www.google.com/maps/@32.8813588,131.086188,3a,75y,333.64h,95.45t/data=!3m6!1e1!3m4!1sZMh9Yu68xzUxV8jfnnOBHQ!2e0!7i13312!8i6656?hl=en",
+            "https://www.google.com/maps/@-5.3045936,72.2518816,3a,90y,143.37h,109.3t/data=!3m7!1e1!3m5!1sMVTD-LNoGVwIN0ToPFNv_w!2e0!3e5!7i13312!8i6656",
+            "https://www.google.com/maps/place/52%C2%B039'52.4%22N+117%C2%B053'02.5%22W/@52.664565,-117.8840384,3a,66.8y,92.41h,92.3t/data=!3m4!1e1!3m2!1sxqjLGkJlg0GG100WYMJs8A!2e0?hl=en",
+            "https://www.google.com/maps/@51.6931741,-0.4196477,3a,66.8y,206.87h,84.84t/data=!3m4!1e1!3m2!1sFCwE2-tyrRO8k3b-AIKSzg!2e0",
+            "https://www.google.com/maps/@44.6591509,11.1257752,3a,66.8y,269.23h,81.47t/data=!3m4!1e1!3m2!1s0YqKxyWH1sQAAAQIuAy4iw!2e0",
+            "https://www.google.com/maps/@51.1789658,-1.8260514,3a,66.8y,175.82h,99.25t/data=!3m4!1e1!3m2!1sPyKwwSmjpNQ__1bFx6SHjg!2e0",
+            "https://www.google.com/maps/@68.5090814,27.4817772,3a,103.3y,340.82h,126.49t/data=!3m4!1e1!3m2!1sNzZLM1mGhUgAAAQZLDcQIg!2e0",
+            "https://www.google.com/maps/@45.8325855,6.8650383,3a,103.9y,354.05h,103.24t/data=!3m4!1e1!3m2!1s3xbZN2BuOIsAAAQzzZq28g!2e0"
+        ];        
+    </script>
+  </body>
