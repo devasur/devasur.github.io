@@ -1,6 +1,8 @@
 # Street View Slider
-
 An easy to use template for creating full width Streetview sliders that shuffles through a list of Streetview locations.
+
+[Demo] https://devasur.github.io/panoslider
+
 * Can be embedded into other web pages using <IFRAME>
 * Can choose which streetview you want to shiffle through
 * Can customize the Panorama Rotation Speed and direction.
@@ -10,7 +12,7 @@ An easy to use template for creating full width Streetview sliders that shuffles
 ## IFRAME Demo
 
 * [WalkInto Test Page](https://walkinto.in/iframetest) Scroll Down
-* [Pano Slider](https://devasur.githob.io/panoslider)
+* [Pano Slider](https://devasur.github.io/panoslider)
 
 ## Documentation
 
