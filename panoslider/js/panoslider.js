@@ -14,6 +14,12 @@ function autoRotate(){
     autoRotate();
   })
 }
+function enableMouseEvents(){
+    document.getElementById('map-canvas-container').style.pointerEvents = 'All';
+}
+function disableMouseEvents(){
+    document.getElementById('map-canvas-container').style.pointerEvents = 'none';
+}
 function run(){
   var panoramaOptions = {              
       pov:pov,
@@ -29,7 +35,7 @@ function run(){
       motionTracking:false,
       motionTrackingControl:false,	
       panControl:false,
-      scrollwheel:false,
+      scrollwheel:true,
       showRoadLabels:false,
       zoomControl:false
   };  

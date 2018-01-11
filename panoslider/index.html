@@ -13,17 +13,33 @@
     <script src="https://devasur.github.io/js/streetview_url_search.js"></script>
     <script src="https://devasur.github.io/js/panoslider.js"></script>
     <style>
-      html, body, #map-canvas {
+      html, body, #map-canvas-container, #map-canvas {
+        position: absolute;
+        top:0px;
+        width:100%;
         height: 100%;
         margin: 0px;
         padding: 0px;
+      }
+      #map-canvas{
+          z-index: 1;
       }        
+      #map-canvas-container{
+          z-index: 2;
+          background-color: rgba(0, 0, 0, 0);
+      }
     </style>
 </head>
-<body onmousedown="pauseAutoRotate=true;" onmouseup="pauseAutoRotate=false;" onload="run()">
-    <div id="map-canvas"></div>
+<body onmousedown="pauseAutoRotate=true;" onmouseup="pauseAutoRotate=false;" onload="run()" onclick="enableMouseEvents()" mouseleave="disableMouseEvents()">
+    <div id="map-canvas-container">
+            <div id="map-canvas"></div>
+    </div>    
     <script>
-        var speed = -0.05;
+        //Adjust rotation speed. 
+        // Positive -> Rotate Anti clockwise from RIGHT to LEFT
+        // Negative -> Rotate Clockwise from LEFT to RIGHT
+        // 0 -> No rotation.
+        var speed = -0.05;        
         var randomSvDb = [	    
             "https://www.google.com/maps/place/45%C2%B041'54.1%22N+10%C2%B004'42.8%22E/@45.6958548,10.0722688,3a,103.9y,224.12h,109.29t/data=!3m4!1e1!3m2!1sU6_1WolkwDjBYG_GHOp7cw!2e0",
             "https://www.google.com/maps/place//@45.4403244,12.3379607,3a,103.9y,260.33h,102.1t/data=!3m4!1e1!3m2!1sCbh0-gNHnhYPjnPY6t8zWA!2e0",
