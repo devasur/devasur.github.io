@@ -27,10 +27,11 @@
       #map-canvas-container{
           z-index: 2;
           background-color: rgba(0, 0, 0, 0);
+          pointer-events: none;
       }
     </style>
 </head>
-<body onmousedown="pauseAutoRotate=true;" onmouseup="pauseAutoRotate=false;" onload="run()" onclick="enableMouseEvents()" mouseleave="disableMouseEvents()">
+<body onmousedown="pauseAutoRotate=true;" onmouseup="pauseAutoRotate=false;" onload="run()" onclick="enableMouseEvents()" onmouseleave="disableMouseEvents()">
     <div id="map-canvas-container">
             <div id="map-canvas"></div>
     </div>    
