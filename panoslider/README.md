@@ -7,7 +7,7 @@ An easy to use template for creating full width Streetview sliders that shuffles
 
 ## IFRAME Demo
 
-*[WalkInto Test Page](https://walkinto.in/iframetest) - Scroll down
+*[WalkInto Test Page](https://walkinto.in/iframetest)
 *[Pano Slider](https://devasur.githob.io/panoslider)
 
 ## Documentation
