@@ -48,8 +48,10 @@ function run(){
       panorama.setOptions(panoramaOptions);
       autoRotate();
       setInterval(function(){
+        pauseAutoRotate = true;
           requestAnimationFrame(function(){
             nextPano();
+            pauseAutoRotate = false;
           })          
       },panoSwitchInterval * 1000)
   })     
