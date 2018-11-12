@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--
+        Create a new API KEY from https://console.developers.google.com
+    -->
+    <script src="https://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyC-OjeJiNtcGb0x-dqPcKIGMUy5sXNVXgQ"></script>
+    <script>
+        function init() {
+            var oldpano = 'CAoSK0FGMVFpcE1XZ1c5bmJndGJNZXJfTUFnbWQtM1JaMUJhOUlwbVZPMmM0b00';
+            var panoramaOptions = {
+                pano: oldpano,  //<< Change This <<<
+                disableDefaultUI: true,
+                clickToGo: false,
+                linksControl: true,
+                motionTracking: true,
+                pov: { heading: -100, pitch: 0 }
+            };
+            var panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"));
+            var outpute = document.getElementById('output');
+            google.maps.event.addListener(panorama, 'pov_changed', function () {
+                output.value = `POV : ${JSON.stringify(panorama.getPov())}`;
+            })
+            panorama.setOptions(panoramaOptions)
+
+        }
+        window.onload = function() {
+            init();
+        };        
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Roboto";
+        }
+
+        #map-canvas {
+            height: 75%;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Roboto";
+        }
+
+        #panoid,
+        #svlinks {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map-canvas"></div>
+    <textarea id="output" style="width:100%;height:25%;"></textarea>
+</body>
+
+</html>
