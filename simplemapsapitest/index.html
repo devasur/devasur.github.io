@@ -25,7 +25,7 @@
             var panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"));
             var outpute = document.getElementById('output');
             google.maps.event.addListener(panorama, 'pov_changed', function () {
-                output.value = `POV : ${JSON.stringify(panorama.getPov())}`;
+                output.value = `POV : ${JSON.stringify(panorama.getPov())} | ZOOM : ${panorama.getZoom()} `;
             })
             panorama.setOptions(panoramaOptions)
 
