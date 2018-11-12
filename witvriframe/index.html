@@ -24,7 +24,18 @@
     </style>
 </head>
 <body>
-    <iframe src="http://lvh.me:3000/tour/eJriakgerelkeSoT1exSx" 
-    class="fullscreenframe"></iframe>    
+<div>
+<h2>docement.referrer</h2>
+<script>
+var referrer = null;
+try{
+   referrer = document.referrer;
+}
+catch(e){
+   referrer = e;
+}
+document.write(referrer);
+</script>
+</div>
 </body>
 </html>
