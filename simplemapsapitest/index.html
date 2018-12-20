@@ -15,7 +15,7 @@
     <script>
         function init() {
             var panorama = new google.maps.StreetViewPanorama(
-            document.getElementById('map'), {pano: 'reception', visible: true});
+            document.getElementById('map-canvas'), {pano: 'reception', visible: true});
             panorama.registerPanoProvider(getCustomPanorama,{cors: true});
         }
         // Return a pano image given the panoID.
