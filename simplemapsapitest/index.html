@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Walkinto - Maps API Test</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,24 +14,39 @@
     <script src="https://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyC-OjeJiNtcGb0x-dqPcKIGMUy5sXNVXgQ"></script>
     <script>
         function init() {
-            var oldpano = 'CAoSK0FGMVFpcE1XZ1c5bmJndGJNZXJfTUFnbWQtM1JaMUJhOUlwbVZPMmM0b00';
-            var panoramaOptions = {
-                pano: oldpano,  //<< Change This <<<
-                disableDefaultUI: true,
-                clickToGo: false,
-                linksControl: true,
-                motionTracking: true,
-                zoom:1,
-                pov: { heading: -100, pitch: 0, zoom:1 }
-            };
-            var panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"));
-            var outpute = document.getElementById('output');
-            google.maps.event.addListener(panorama, 'pov_changed', function () {
-                output.value = `POV : ${JSON.stringify(panorama.getPov())} | ZOOM : ${panorama.getZoom()} `;
-            })
-            panorama.setOptions(panoramaOptions)
-
+            var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('map'), {pano: 'reception', visible: true});
+            panorama.registerPanoProvider(getCustomPanorama,{cors: true});
         }
+        // Return a pano image given the panoID.
+        function getCustomPanoramaTileUrl(pano, zoom, tileX, tileY) {
+        return  "https://s3.eu-central-1.amazonaws.com/tiledtestpanoseu.walkinto.in/test/blacksquare_grid.jpg";
+        }
+
+        // Construct the appropriate StreetViewPanoramaData given
+        // the passed pano IDs.
+        function getCustomPanorama(pano, zoom, tileX, tileY) {
+        if (pano === 'reception') {
+            return {
+            location: {
+                pano: 'reception',
+                description: 'WalkInto WebGL Test'
+            },
+            links: [],
+            // The text for the copyright control.
+            copyright: 'WalkInto Inc.',
+            // The definition of the tiles for this panorama.
+            tiles: {
+                tileSize: new google.maps.Size(512,512),
+                worldSize: new google.maps.Size(8192*10, 4096*10),
+                // The heading in degrees at the origin of the panorama
+                // tile set.
+                centerHeading: 105,
+                getTileUrl: getCustomPanoramaTileUrl
+            }
+            };
+        }
+        }        
         window.onload = function() {
             init();
         };        
