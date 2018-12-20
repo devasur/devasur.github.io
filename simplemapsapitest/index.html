@@ -20,7 +20,10 @@
         }
         // Return a pano image given the panoID.
         function getCustomPanoramaTileUrl(pano, zoom, tileX, tileY) {
-        return  "https://s3.eu-central-1.amazonaws.com/tiledtestpanoseu.walkinto.in/test/blacksquare_grid.jpg";
+            if (zoom === 0){
+             return 'https://s3-us-west-2.amazonaws.com/saulbpano/resources/spacer.gif';
+            }     
+            return  "https://s3.eu-central-1.amazonaws.com/tiledtestpanoseu.walkinto.in/test/blacksquare_grid.jpg";
         }
 
         // Construct the appropriate StreetViewPanoramaData given
